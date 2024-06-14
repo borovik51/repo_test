@@ -1,0 +1,417 @@
+#-----------------------------------------------------------
+# Vivado v2023.1.1 (64-bit)
+# SW Build 3900603 on Fri Jun 16 19:31:24 MDT 2023
+# IP Build 3900379 on Sat Jun 17 05:28:05 MDT 2023
+# SharedData Build 3899622 on Fri Jun 16 03:34:24 MDT 2023
+# Start of session at: Fri Jun 14 13:51:26 2024
+# Process ID: 15672
+# Current directory: C:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.runs/design_1_magic_core_0_0_synth_1
+# Command line: vivado.exe -log design_1_magic_core_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_magic_core_0_0.tcl
+# Log file: C:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.runs/design_1_magic_core_0_0_synth_1/design_1_magic_core_0_0.vds
+# Journal file: C:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.runs/design_1_magic_core_0_0_synth_1\vivado.jou
+# Running On: PC-0x1E, OS: Windows, CPU Frequency: 2904 MHz, CPU Physical cores: 8, Host memory: 16851 MB
+#-----------------------------------------------------------
+source design_1_magic_core_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1532.863 ; gain = 195.969
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/DDCS_Student/ip_repo/magic_core_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/DDCS_Student/ip_repo/mac_core_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.cache/ip 
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_magic_core_0_0
+Command: synth_design -top design_1_magic_core_0_0 -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1820
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2357.336 ; gain = 409.691
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_magic_core_0_0' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ip/design_1_magic_core_0_0/synth/design_1_magic_core_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'm_lsfr_v1_0' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:3]
+INFO: [Synth 8-638] synthesizing module 'mac_wrapper' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/mac_ip_wrapper.vhd:20]
+INFO: [Synth 8-638] synthesizing module 'mac_core' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/mac_core.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'mac_core' (0#1) [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/mac_core.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'mac_wrapper' (0#1) [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/mac_ip_wrapper.vhd:20]
+INFO: [Synth 8-6157] synthesizing module 'up_axi' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/up_axi.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'up_axi' (0#1) [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/up_axi.v:5]
+WARNING: [Synth 8-689] width (16) of port connection 'up_axi_awaddr' does not match port width (10) of module 'up_axi' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:94]
+WARNING: [Synth 8-689] width (16) of port connection 'up_axi_araddr' does not match port width (10) of module 'up_axi' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:104]
+INFO: [Synth 8-6155] done synthesizing module 'm_lsfr_v1_0' (0#1) [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_magic_core_0_0' (0#1) [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ip/design_1_magic_core_0_0/synth/design_1_magic_core_0_0.v:53]
+WARNING: [Synth 8-7129] Port up_axi_awaddr[1] in module up_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port up_axi_awaddr[0] in module up_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port up_axi_wstrb[3] in module up_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port up_axi_wstrb[2] in module up_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port up_axi_wstrb[1] in module up_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port up_axi_wstrb[0] in module up_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port up_axi_araddr[1] in module up_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port up_axi_araddr[0] in module up_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[15] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[14] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[13] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[12] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[11] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[10] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awprot[2] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awprot[1] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awprot[0] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[15] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[14] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[13] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[12] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[11] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[10] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arprot[2] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arprot[1] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arprot[0] in module m_lsfr_v1_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2453.488 ; gain = 505.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2471.402 ; gain = 523.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2471.402 ; gain = 523.758
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2471.402 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2584.105 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 2584.105 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2584.105 ; gain = 636.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2584.105 ; gain = 636.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2584.105 ; gain = 636.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2584.105 ; gain = 636.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    5 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               16 Bit    Registers := 4     
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 3     
+	   7 Input   32 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 22    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP sum_h, operation Mode is: C+A:B.
+DSP Report: operator sum_h is absorbed into DSP sum_h.
+DSP Report: Generating DSP sum_h, operation Mode is: PCIN+A:B+C.
+DSP Report: operator sum_h is absorbed into DSP sum_h.
+DSP Report: Generating DSP sum_g, operation Mode is: C+A:B.
+DSP Report: operator sum_g is absorbed into DSP sum_g.
+DSP Report: Generating DSP sum_g, operation Mode is: PCIN+A:B+C.
+DSP Report: operator sum_g is absorbed into DSP sum_g.
+INFO: [Synth 8-3917] design design_1_magic_core_0_0 has port s_axi_bresp[1] driven by constant 0
+INFO: [Synth 8-3917] design design_1_magic_core_0_0 has port s_axi_bresp[0] driven by constant 0
+INFO: [Synth 8-3917] design design_1_magic_core_0_0 has port s_axi_rresp[1] driven by constant 0
+INFO: [Synth 8-3917] design design_1_magic_core_0_0 has port s_axi_rresp[0] driven by constant 0
+WARNING: [Synth 8-7129] Port s_axi_awaddr[15] in module design_1_magic_core_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[14] in module design_1_magic_core_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[13] in module design_1_magic_core_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[12] in module design_1_magic_core_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[11] in module design_1_magic_core_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[10] in module design_1_magic_core_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[1] in module design_1_magic_core_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[0] in module design_1_magic_core_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awprot[2] in module design_1_magic_core_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awprot[1] in module design_1_magic_core_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awprot[0] in module design_1_magic_core_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[3] in module design_1_magic_core_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[2] in module design_1_magic_core_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[1] in module design_1_magic_core_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[0] in module design_1_magic_core_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[15] in module design_1_magic_core_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[14] in module design_1_magic_core_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[13] in module design_1_magic_core_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[12] in module design_1_magic_core_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[11] in module design_1_magic_core_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[10] in module design_1_magic_core_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[1] in module design_1_magic_core_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[0] in module design_1_magic_core_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arprot[2] in module design_1_magic_core_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arprot[1] in module design_1_magic_core_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arprot[0] in module design_1_magic_core_0_0 is either unconnected or has no load
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_2_reg[15]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_2_reg[14]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_2_reg[13]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_2_reg[12]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_2_reg[11]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_2_reg[10]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_2_reg[9]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_2_reg[8]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_2_reg[7]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_2_reg[6]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_2_reg[5]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_2_reg[4]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_2_reg[3]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_2_reg[2]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_2_reg[1]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_2_reg[0]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_1_reg[15]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_1_reg[14]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_1_reg[13]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_1_reg[12]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_1_reg[11]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_1_reg[10]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_1_reg[9]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_1_reg[8]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_1_reg[7]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_1_reg[6]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_1_reg[5]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_1_reg[4]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_1_reg[3]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_1_reg[2]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_1_reg[1]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/up_output_1_reg[0]/Q' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.gen/sources_1/bd/design_1/ipshared/f4e5/src/m_lsfr_v1_0.v:128]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2584.105 ; gain = 636.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|mac_core    | C+A:B       | 11     | 18     | 29     | -      | 31     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mac_core    | PCIN+A:B+C  | 13     | 18     | 29     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mac_core    | C+A:B       | 10     | 18     | 28     | -      | 31     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mac_core    | PCIN+A:B+C  | 13     | 18     | 28     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2584.105 ; gain = 636.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2584.105 ; gain = 636.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2584.105 ; gain = 636.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2584.105 ; gain = 636.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2584.105 ; gain = 636.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2584.105 ; gain = 636.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2584.105 ; gain = 636.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2584.105 ; gain = 636.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2584.105 ; gain = 636.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     1|
+|2     |LUT2 |     7|
+|3     |LUT3 |     5|
+|4     |LUT4 |    13|
+|5     |LUT5 |    27|
+|6     |LUT6 |    32|
+|7     |FDRE |   188|
+|8     |FDSE |     3|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2584.105 ; gain = 636.461
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 96 critical warnings and 27 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 2584.105 ; gain = 523.758
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2584.105 ; gain = 636.461
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2584.105 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2584.105 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 2904479
+INFO: [Common 17-83] Releasing license: Synthesis
+32 Infos, 56 Warnings, 96 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 2584.105 ; gain = 1012.684
+INFO: [Common 17-1381] The checkpoint 'C:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.runs/design_1_magic_core_0_0_synth_1/design_1_magic_core_0_0.dcp' has been generated.
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Coretcl 2-1174] Renamed 2 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/DDCS_Student/Wavelet_Image_Processing_FPGA_Borowik/Wavelet_Image_Processing_FPGA_Borowik.runs/design_1_magic_core_0_0_synth_1/design_1_magic_core_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_magic_core_0_0_utilization_synth.rpt -pb design_1_magic_core_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 14 13:52:16 2024...

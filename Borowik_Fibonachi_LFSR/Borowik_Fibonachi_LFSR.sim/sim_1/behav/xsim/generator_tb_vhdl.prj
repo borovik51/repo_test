@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Borowik_Fibonachi_LFSR.srcs/sources_1/new/generator.vhd" \
+"../../../../Borowik_Fibonachi_LFSR.srcs/sources_1/new/generator_tb.vhd" \
+
+# Do not sort compile order
+nosort

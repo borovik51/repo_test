@@ -1,0 +1,293 @@
+
+*** Running vivado
+    with args -log design_1_m_lsfr_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_m_lsfr_0_0.tcl
+
+
+
+****** Vivado v2023.1.1 (64-bit)
+  **** SW Build 3900603 on Fri Jun 16 19:31:24 MDT 2023
+  **** IP Build 3900379 on Sat Jun 17 05:28:05 MDT 2023
+  **** SharedData Build 3899622 on Fri Jun 16 03:34:24 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source design_1_m_lsfr_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1531.961 ; gain = 196.637
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/DDCS_Student/ip_repo/m_lsfr_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_m_lsfr_0_0
+Command: synth_design -top design_1_m_lsfr_0_0 -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 20344
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2357.148 ; gain = 409.902
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_m_lsfr_0_0' [c:/Users/DDCS_Student/project_vivo_test/project_vivo_test.gen/sources_1/bd/design_1/ip/design_1_m_lsfr_0_0/synth/design_1_m_lsfr_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'm_lsfr_v1_0' [c:/Users/DDCS_Student/project_vivo_test/project_vivo_test.gen/sources_1/bd/design_1/ipshared/ca62/src/m_lsfr_v1_0.v:3]
+INFO: [Synth 8-638] synthesizing module 'ADDER' [c:/Users/DDCS_Student/project_vivo_test/project_vivo_test.gen/sources_1/bd/design_1/ipshared/ca62/src/ADDER.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'ADDER' (0#1) [c:/Users/DDCS_Student/project_vivo_test/project_vivo_test.gen/sources_1/bd/design_1/ipshared/ca62/src/ADDER.vhd:16]
+INFO: [Synth 8-6157] synthesizing module 'up_axi' [c:/Users/DDCS_Student/project_vivo_test/project_vivo_test.gen/sources_1/bd/design_1/ipshared/ca62/src/up_axi.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'up_axi' (0#1) [c:/Users/DDCS_Student/project_vivo_test/project_vivo_test.gen/sources_1/bd/design_1/ipshared/ca62/src/up_axi.v:5]
+WARNING: [Synth 8-689] width (16) of port connection 'up_axi_awaddr' does not match port width (10) of module 'up_axi' [c:/Users/DDCS_Student/project_vivo_test/project_vivo_test.gen/sources_1/bd/design_1/ipshared/ca62/src/m_lsfr_v1_0.v:79]
+WARNING: [Synth 8-689] width (16) of port connection 'up_axi_araddr' does not match port width (10) of module 'up_axi' [c:/Users/DDCS_Student/project_vivo_test/project_vivo_test.gen/sources_1/bd/design_1/ipshared/ca62/src/m_lsfr_v1_0.v:89]
+INFO: [Synth 8-6155] done synthesizing module 'm_lsfr_v1_0' (0#1) [c:/Users/DDCS_Student/project_vivo_test/project_vivo_test.gen/sources_1/bd/design_1/ipshared/ca62/src/m_lsfr_v1_0.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_m_lsfr_0_0' (0#1) [c:/Users/DDCS_Student/project_vivo_test/project_vivo_test.gen/sources_1/bd/design_1/ip/design_1_m_lsfr_0_0/synth/design_1_m_lsfr_0_0.v:53]
+WARNING: [Synth 8-7129] Port up_axi_awaddr[1] in module up_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port up_axi_awaddr[0] in module up_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port up_axi_wstrb[3] in module up_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port up_axi_wstrb[2] in module up_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port up_axi_wstrb[1] in module up_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port up_axi_wstrb[0] in module up_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port up_axi_araddr[1] in module up_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port up_axi_araddr[0] in module up_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[15] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[14] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[13] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[12] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[11] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[10] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awprot[2] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awprot[1] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awprot[0] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[15] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[14] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[13] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[12] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[11] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[10] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arprot[2] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arprot[1] in module m_lsfr_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arprot[0] in module m_lsfr_v1_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2452.363 ; gain = 505.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2470.227 ; gain = 522.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2470.227 ; gain = 522.980
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2470.227 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2576.887 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 2576.887 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2576.887 ; gain = 629.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2576.887 ; gain = 629.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2576.887 ; gain = 629.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2576.887 ; gain = 629.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 7     
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 3     
+	   7 Input   32 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 22    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3917] design design_1_m_lsfr_0_0 has port s_axi_bresp[1] driven by constant 0
+INFO: [Synth 8-3917] design design_1_m_lsfr_0_0 has port s_axi_bresp[0] driven by constant 0
+INFO: [Synth 8-3917] design design_1_m_lsfr_0_0 has port s_axi_rresp[1] driven by constant 0
+INFO: [Synth 8-3917] design design_1_m_lsfr_0_0 has port s_axi_rresp[0] driven by constant 0
+WARNING: [Synth 8-7129] Port s_axi_awaddr[15] in module design_1_m_lsfr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[14] in module design_1_m_lsfr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[13] in module design_1_m_lsfr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[12] in module design_1_m_lsfr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[11] in module design_1_m_lsfr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[10] in module design_1_m_lsfr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[1] in module design_1_m_lsfr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[0] in module design_1_m_lsfr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awprot[2] in module design_1_m_lsfr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awprot[1] in module design_1_m_lsfr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awprot[0] in module design_1_m_lsfr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[3] in module design_1_m_lsfr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[2] in module design_1_m_lsfr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[1] in module design_1_m_lsfr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[0] in module design_1_m_lsfr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[15] in module design_1_m_lsfr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[14] in module design_1_m_lsfr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[13] in module design_1_m_lsfr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[12] in module design_1_m_lsfr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[11] in module design_1_m_lsfr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[10] in module design_1_m_lsfr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[1] in module design_1_m_lsfr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[0] in module design_1_m_lsfr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arprot[2] in module design_1_m_lsfr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arprot[1] in module design_1_m_lsfr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arprot[0] in module design_1_m_lsfr_0_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2576.887 ; gain = 629.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2576.887 ; gain = 629.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2576.887 ; gain = 629.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2576.887 ; gain = 629.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2576.887 ; gain = 629.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2576.887 ; gain = 629.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2576.887 ; gain = 629.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2576.887 ; gain = 629.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2576.887 ; gain = 629.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2576.887 ; gain = 629.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |     8|
+|2     |LUT1   |     1|
+|3     |LUT2   |    37|
+|4     |LUT3   |     6|
+|5     |LUT4   |    10|
+|6     |LUT5   |     8|
+|7     |LUT6   |    62|
+|8     |FDRE   |   261|
+|9     |FDSE   |     3|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2576.887 ; gain = 629.641
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 27 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 2576.887 ; gain = 522.980
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2576.887 ; gain = 629.641
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2576.887 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2576.887 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 762e4996
+INFO: [Common 17-83] Releasing license: Synthesis
+31 Infos, 55 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 2576.887 ; gain = 1006.395
+INFO: [Common 17-1381] The checkpoint 'C:/Users/DDCS_Student/project_vivo_test/project_vivo_test.runs/design_1_m_lsfr_0_0_synth_1/design_1_m_lsfr_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_m_lsfr_0_0, cache-ID = bbcae98b3ea32dac
+INFO: [Coretcl 2-1174] Renamed 3 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/DDCS_Student/project_vivo_test/project_vivo_test.runs/design_1_m_lsfr_0_0_synth_1/design_1_m_lsfr_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_m_lsfr_0_0_utilization_synth.rpt -pb design_1_m_lsfr_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 13 10:38:38 2024...
