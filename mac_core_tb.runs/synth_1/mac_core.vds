@@ -1,0 +1,242 @@
+#-----------------------------------------------------------
+# Vivado v2023.1.1 (64-bit)
+# SW Build 3900603 on Fri Jun 16 19:31:24 MDT 2023
+# IP Build 3900379 on Sat Jun 17 05:28:05 MDT 2023
+# SharedData Build 3899622 on Fri Jun 16 03:34:24 MDT 2023
+# Start of session at: Mon Jun 17 16:03:12 2024
+# Process ID: 16132
+# Current directory: C:/Users/DDCS_Student/mac_core_tb/mac_core_tb.runs/synth_1
+# Command line: vivado.exe -log mac_core.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mac_core.tcl
+# Log file: C:/Users/DDCS_Student/mac_core_tb/mac_core_tb.runs/synth_1/mac_core.vds
+# Journal file: C:/Users/DDCS_Student/mac_core_tb/mac_core_tb.runs/synth_1\vivado.jou
+# Running On: PC-0x1E, OS: Windows, CPU Frequency: 2904 MHz, CPU Physical cores: 8, Host memory: 16851 MB
+#-----------------------------------------------------------
+source mac_core.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1531.602 ; gain = 197.059
+Command: synth_design -top mac_core -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 20572
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1967.281 ; gain = 410.852
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'mac_core' [C:/Users/DDCS_Student/Desktop/repo/mac_src/mac_core.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'mac_core' (0#1) [C:/Users/DDCS_Student/Desktop/repo/mac_src/mac_core.vhd:16]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2057.883 ; gain = 501.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2057.883 ; gain = 501.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2057.883 ; gain = 501.453
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2057.883 ; gain = 501.453
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input   12 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP mul_drivers_h[0], operation Mode is: A*B.
+DSP Report: operator mul_drivers_h[0] is absorbed into DSP mul_drivers_h[0].
+DSP Report: Generating DSP sum_h, operation Mode is: C+A*B.
+DSP Report: operator sum_h is absorbed into DSP sum_h.
+DSP Report: operator mul_drivers_h[3] is absorbed into DSP sum_h.
+DSP Report: Generating DSP sum_h, operation Mode is: PCIN+A*B.
+DSP Report: operator sum_h is absorbed into DSP sum_h.
+DSP Report: operator mul_drivers_h[2] is absorbed into DSP sum_h.
+DSP Report: Generating DSP sum_h, operation Mode is: PCIN+A*B.
+DSP Report: operator sum_h is absorbed into DSP sum_h.
+DSP Report: operator mul_drivers_h[1] is absorbed into DSP sum_h.
+DSP Report: Generating DSP mul_drivers_g[0], operation Mode is: A*B.
+DSP Report: operator mul_drivers_g[0] is absorbed into DSP mul_drivers_g[0].
+DSP Report: Generating DSP sum_g, operation Mode is: C+A*B.
+DSP Report: operator sum_g is absorbed into DSP sum_g.
+DSP Report: operator mul_drivers_g[3] is absorbed into DSP sum_g.
+DSP Report: Generating DSP sum_g, operation Mode is: PCIN+A*B.
+DSP Report: operator sum_g is absorbed into DSP sum_g.
+DSP Report: operator mul_drivers_g[2] is absorbed into DSP sum_g.
+DSP Report: Generating DSP sum_g, operation Mode is: PCIN+A*B.
+DSP Report: operator sum_g is absorbed into DSP sum_g.
+DSP Report: operator mul_drivers_g[1] is absorbed into DSP sum_g.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2251.312 ; gain = 694.883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|mac_core    | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mac_core    | C+A*B       | 16     | 16     | 31     | -      | 31     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mac_core    | PCIN+A*B    | 16     | 16     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mac_core    | PCIN+A*B    | 16     | 16     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mac_core    | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mac_core    | C+A*B       | 16     | 16     | 31     | -      | 31     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mac_core    | PCIN+A*B    | 16     | 16     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mac_core    | PCIN+A*B    | 16     | 16     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2251.312 ; gain = 694.883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2251.312 ; gain = 694.883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2251.312 ; gain = 694.883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2251.312 ; gain = 694.883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2251.312 ; gain = 694.883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2251.312 ; gain = 694.883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2251.312 ; gain = 694.883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2251.312 ; gain = 694.883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|mac_core    | A*B         | 30     | 12     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mac_core    | C+A*B       | 30     | 12     | 48     | -      | 31     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mac_core    | PCIN+A*B    | 30     | 12     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mac_core    | PCIN+A*B    | 30     | 12     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mac_core    | A*B         | 30     | 9      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mac_core    | C+A*B       | 30     | 9      | 48     | -      | 31     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mac_core    | PCIN+A*B    | 30     | 9      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mac_core    | PCIN+A*B    | 30     | 9      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |DSP48E1 |     8|
+|2     |LUT1    |     1|
+|3     |IBUF    |    65|
+|4     |OBUF    |    32|
++------+--------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   106|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2251.312 ; gain = 694.883
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2251.312 ; gain = 694.883
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2251.312 ; gain = 694.883
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2262.227 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2368.117 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 1d8f3961
+INFO: [Common 17-83] Releasing license: Synthesis
+14 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2368.117 ; gain = 836.516
+INFO: [Common 17-1381] The checkpoint 'C:/Users/DDCS_Student/mac_core_tb/mac_core_tb.runs/synth_1/mac_core.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file mac_core_utilization_synth.rpt -pb mac_core_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 17 16:03:45 2024...
