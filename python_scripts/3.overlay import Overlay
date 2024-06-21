@@ -1,0 +1,105 @@
+from pynq.overlay import Overlay
+from PIL import Image
+import numpy as np
+
+import sys
+sys.path.append('./python_libs/')
+from fixedint import *
+# 4294443008
+
+# init constansts
+ol = Overlay("magic.bit")
+MAC = ol.magic_ip_0
+
+MAC_INPUT_AB_ADDR = 3
+MAC_INPUT_CD_ADDR = 4
+MAC_MODE_ADDR = 6
+OUTPUTAB_ADDR = 5
+
+INPUT_IMG_PATH = 'img/lena.bmp'
+OUTPUT_IMG_PATH = 'img/output_image.bmp'
+
+
+# Functions
+def parce_img(path : str) -> np.array:
+    img = np.array(Image.open(path)).astype(UInt8)
+    return img
+
+def DWT(arr : np.array, is_direct : bool, stage : bool):
+    MAC.write(MAC_MODE_ADDR * 4, is_direct) # Set DWT directoin
+    mac_input = np.empty(2).astype(UInt32)
+#     mac_output = UInt32(0)
+    
+    rows, cols = arr.shape
+#     if (stage == 0):
+#         output = np.zeros((rows, cols//2, 2)).astype(UInt16)
+#     else:
+#         output = np.zeros((rows//2, cols, 2)).astype(UInt16)
+    
+    output = np.zeros(arr.shape).astype(UInt32)
+    
+    row_buffer = np.zeros(cols).astype(UInt32)
+    
+        
+    for i in range(rows):
+        for j in range(cols-3):
+            mac_input[:] = 0
+            if (stage == 0):
+                mac_input[:] = [(arr[i][j] << 4), (arr[i][j+2]) << 4]
+                mac_input[:] <<= 16
+                mac_input[:] += [(arr[i][j+1] << 4), (arr[i][j+3]) << 4]
+            else:
+                mac_input[:] = [arr[i][j], arr[i][j+2]]
+                mac_input[:] <<= 16
+                mac_input[:] = [arr[i][j], arr[i][j+2]]
+
+            MAC.write(MAC_INPUT_AB_ADDR * 4, mac_input[0])
+            MAC.write(MAC_INPUT_CD_ADDR * 4, mac_input[1])
+            row_buffer[j] = UInt32(MAC.read(OUTPUTAB_ADDR * 4))
+            
+        output[i][:256], output[i][256:] = [row_buffer[::2], row_buffer[::2]]
+        
+    for i in range(rows):
+        for j in range(cols):
+            if (j < 256):
+                output[i][j] &= UInt32(0x00000FF0)
+                output[i][j] >>= UInt32(4)
+            else:
+                output[i][j] &= UInt32(0x0FF00000)
+                output[i][j] >>= UInt32(20)
+                
+    for i in range(rows):
+        for j in range(cols):
+            output[i][j] = UInt8(output[i][j])
+#         row_buffer[:] &= 0x0000FFFF
+#         for j in range(row_buffer.shape)
+#         rb = np.zeros((cols//2, 2)).astype(UInt8)
+#             rb[:][0] = 
+            
+#             rb[:][:] = [row_buffer[:] & 0x0000FFFF, (row_buffer[::2] & 0xFFFF0000) >> 16]
+            
+#             output[i][:][:] = [row_buffer[::2] & 0x0000FFFF, (row_buffer[::2] & 0xFFFF0000) >> 16]
+#             output[i][:] = row_buffer[::2]
+    return output
+
+# MAIN
+img = parce_img(INPUT_IMG_PATH)
+output = np.zeros((512, 512)).astype(UInt8)
+output = DWT(img, 0, 0)
+
+# I = UInt32(255)
+# print(hex(I))
+# I &= 0x00000FF0
+# print(hex(I))
+
+# rows, cols = o.shape
+# for i in range(rows):
+#     for j in range(cols):
+#         output[i][j] = o[i][j] >> 4
+
+out_img = Image.fromarray(output.astype(np.uint8))
+out_img.save(OUTPUT_IMG_PATH, format="BMP")
+
+print('done')
+
+# print(f"{result:x}")
