@@ -2,8 +2,8 @@ from PIL import Image
 import numpy as np
 from fixedint import *
 
-INPUT_IMG_PATH = '../img/lena.bmp'
-OUTPUT_IMG_PATH = '../img/output_image.bmp'
+INPUT_IMG_PATH = '../lena.bmp'
+OUTPUT_IMG_PATH = 'output_image.bmp'
 
 def parce_img(path : str) -> np.array:
     img = np.array(Image.open(path)).astype(UInt8)
@@ -49,15 +49,11 @@ def DWT(arr : np.array, is_direct : bool, stage : bool):
 # stage = 0 # '0' - rows stage, '1' - coloumns stage
 
 # DWT(img, mode, stage)
+arr = np.ones(5, dtype=bytes)
+arr = b'255'
+print(arr[0])
 
-small = UInt8(0)
-big = UInt16(255)
-
-# small = 255
-# big = 0
-
-print(hex(big), hex(small))
-# print('hello')
+print('done')
 
 
 # out_img = Image.fromarray(img.astype(np.uint8))

@@ -21,12 +21,12 @@ begin
             output => output
         );
         
---     clock_generator : process is
---        constant TPC : time := 10 ns;
---     begin
---        clk <= '1'; wait for TPC;
---        clk <= '0'; wait for TPC;
---     end process clock_generator;
+     clock_generator : process is
+        constant TPC : time := 10 ns;
+     begin
+        clk <= '1'; wait for TPC;
+        clk <= '0'; wait for TPC;
+     end process clock_generator;
      
      stimulus : process is
         variable tmp1 : std_logic_vector(15 downto 0) := (others => '0');
@@ -34,15 +34,20 @@ begin
      begin
         --Init input
         mode <= '0';
-        input(0) <= X"0000";
-        input(1) <= X"0001";
+        input(0) <= X"0100";
+        input(1) <= X"0000";
         input(2) <= X"0000";
-        input(3) <= X"0001";
+        input(3) <= X"0000";
         wait for 10 ns;
         tmp1 := output(0);
         tmp1 := output(1);
         wait for 40 ns;
         mode <= '1';
+        input(0) <= tmp1;
+        input(1) <= X"0000";
+        input(2) <= X"0000";
+        input(3) <= X"0000";
+        --mode <= '1';
         wait;
      end process stimulus;
 end architecture behavioral;
