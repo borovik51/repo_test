@@ -7,7 +7,7 @@ entity mac_tb is
 end entity mac_tb;
 
 architecture behavioral of mac_tb is
-    signal mode : std_logic := '0';
+    signal mode : std_logic_vector(1 downto 0) := (others =>'0');
     signal clk : std_logic := '0';
     signal input : MAC_INPUT := 
         (0 to MAC_INPUT_NUMBER-1 => (others =>'0'));
@@ -29,20 +29,21 @@ begin
 --     end process clock_generator;
      
      stimulus : process is
-        variable tmp1 : std_logic_vector(15 downto 0) := (others => '0');
-        variable tmp2 : std_logic_vector(15 downto 0) := (others => '0');
+--        variable tmp1 : std_logic_vector(15 downto 0) := (others => '0');
+--        variable tmp2 : std_logic_vector(15 downto 0) := (others => '0');
      begin
         --Init input
-        mode <= '0';
+        mode <= "00";
         input(0) <= X"0000";
         input(1) <= X"0001";
         input(2) <= X"0000";
         input(3) <= X"0001";
         wait for 10 ns;
-        tmp1 := output(0);
-        tmp1 := output(1);
-        wait for 40 ns;
-        mode <= '1';
+        mode <= "01";
+        wait for 10 ns;
+        mode <= "10";
+        wait for 10 ns;
+        mode <= "11";
         wait;
      end process stimulus;
 end architecture behavioral;

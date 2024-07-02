@@ -7,7 +7,7 @@ package mac_types is
 --    constant PIXEL_SIZE       : natural := 8;
     constant MAC_DATA_SIZE    : natural := 16;
     constant MAC_INPUT_NUMBER : natural := 4;
-    constant MAC_OUPUT_NUBMER : natural := 2;
+    constant MAC_OUPUT_NUBMER : natural := 1;
     
     --MAC data types declaration    
 --    type MAC_INPUT is array(0 to MAC_INPUT_NUMBER-1) of
