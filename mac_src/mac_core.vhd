@@ -7,7 +7,7 @@ entity mac_core is
     port(
         mode    : in std_logic_vector(1 downto 0); -- '00' - direct h,
                                                    -- '01' - inverce h 
-                                                   -- '10' - direct  g 
+                                                   -- '10' - direct  g
                                                    -- '11' - inverce g 
         input   : in MAC_INPUT;
         output  : out MAC_OUTPUT
@@ -19,16 +19,16 @@ end entity mac_core;
 architecture behavioral of mac_core is
     --Coef declaration--------------------------------------------------------
     constant coef_h_d : MAC_INPUT :=
-      (X"87BA", X"0D62", X"8396", X"8212");
+      (X"F846", X"0D63", X"FC6A", X"FDEE");
     
     constant coef_h_i : MAC_INPUT :=
-      (X"8212", X"8396", X"0D62", X"87BA");
+      (X"FDEE", X"FC6A", X"0D63", X"F846");
     
     constant coef_g_d : MAC_INPUT :=
-      (X"8212", X"0396", X"0D62", X"07BA");
+      (X"FDEE", X"0397", X"0D63", X"07BB");
     
     constant coef_g_i : MAC_INPUT :=
-      (X"07BA", X"0D62", X"0396", X"8212");
+      (X"07BB", X"0D63", X"0397", X"FDEE");
     --------------------------------------------------------------------------
     
     --Types declaration
@@ -47,6 +47,7 @@ architecture behavioral of mac_core is
     signal sum : signed(MAC_DATA_SIZE*2-1 downto 0) :=
         (others => '0');
 begin
+
     --Chose coefs
     with mode select
        tmp_mul_driver <= coef_h_d when "00",
